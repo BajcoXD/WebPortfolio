@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root{
+
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -547,35 +551,35 @@ section:first-of-type {
 }
 
 .about-img-container #slider-img-1 {
-  background-image: url("./img/Group-AcademyPhoto.jpg");
+  background-image: url("./Assets/img/Group-AcademyPhoto.jpg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .about-img-container #slider-img-2 {
-  background-image: url("./img/sertifikat.png");
+  background-image: url("./Assets/img/sertifikat.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .about-img-container #slider-img-3 {
-  background-image: url("./img/pc-programing.jpg");
+  background-image: url("./Assets/img/pc-programing.jpg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .about-img-container #slider-img-4 {
-  background-image: url("./img/hakaton-ohrid.png");
+  background-image: url("./Assets/img/hakaton-ohrid.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .about-img-container #slider-img-4 {
-  background-image: url("./img/ohrid-hakaton-2.jpg");
+  background-image: url("./Assets/img/ohrid-hakaton-2.jpg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
