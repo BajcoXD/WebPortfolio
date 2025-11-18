@@ -1,0 +1,472 @@
+@font-face {
+  font-family: "Kanit-Bold";
+  src: url("./assets/Fonts/Kanit/Kanit-Bold.ttf");
+}
+@font-face {
+  font-family: "Kanit-Regular";
+  src: url("./assets/Fonts/Kanit/Kanit-Regular.ttf");
+}
+@font-face {
+  font-family: "Nosifer-Regular";
+  src: url("./assets/Fonts/Nosifer/Nosifer-Regular.ttf");
+}
+@font-face {
+  font-family: "Rubik-Glitch";
+  src: url("./assets/Fonts/Rubik_Glitch/RubikGlitch-Regular.ttf");
+}
+@font-face {
+  font-family: "SedgwickAve-Regular";
+  src: url("./assets/Fonts/Sedgwick_Ave/SedgwickAve-Regular.ttf");
+}
+@font-face {
+  font-family: "BebasNeue-Regular";
+  src: url("./assets/Fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*=========== HEADER SECTION =============*/
+#header {
+  z-index: 100;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 30px 30px 20px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+/* HEADER LOGO */
+.logo {
+  width: 25%;
+  height: auto;
+  padding-left: 90px;
+}
+/* NAVBAR */
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(6, 62, 85);
+  font-family: "Kanit-Bold", sans-serif;
+  transition: 0.3s;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color: rgb(13, 160, 165);
+}
+#navbar li a:not(:has(.cart)).active::after,
+#navbar li a:not(:has(.cart)):hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: rgb(13, 160, 165);
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* HEADER CART */
+.cart {
+  width: 8%;
+  height: auto;
+}
+/*================ BANNER SECTION =============*/
+#banner {
+  width: 100%;
+  height: 900px;
+  background-color: #78d6e0;
+  display: flex;
+}
+.banner-text {
+  width: 50%;
+  height: auto;
+  padding-left: 100px;
+  padding-top: 70px;
+}
+#banner h1 {
+  font-family: "Nosifer-Regular", sans-serif;
+  font-size: 60px;
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+#banner h2 {
+  font-family: "Nosifer-Regular", sans-serif;
+  font-size: 65px;
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+#banner h3 {
+  font-family: "BebasNeue-Regular", sans-serif;
+  font-size: 40px;
+  letter-spacing: 4px;
+  word-spacing: 20px;
+  padding-left: 160px;
+}
+.shop-nowBTN h4 {
+  font-family: "SedgwickAve-Regular", sans-serif;
+  font-size: 150%;
+  padding-bottom: 20px;
+}
+.shop-nowBTN {
+  padding-top: 45%;
+}
+
+.shop-nowBTN button {
+  background: #ff4800; /* Vibrant orange-red */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.shop-nowBTN button:hover {
+  background: #d83c00; /* Darker orange for hover */
+  transform: scale(1.05); /* Slight pop effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* BANNER VISUAL IMG */
+.banner-visual {
+  width: 40%;
+  height: auto;
+  display: flex;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+.banner-img {
+  padding-left: 100px;
+}
+/* ============== FEATURES =================== */
+#feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section-p1 {
+  padding: 40px 80px;
+}
+.fe-box img {
+  width: 130px;
+  height: auto;
+  padding-bottom: 10px;
+}
+#feature .fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  margin: 15px;
+}
+#feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+  cursor: pointer;
+}
+#feature .fe-box b {
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color: aqua;
+  background-color: rgb(13, 160, 165);
+  text-align: center;
+}
+#feature .fe-box:nth-child(2) b {
+  background-color: rgb(5, 5, 141);
+}
+#feature .fe-box:nth-child(3) b {
+  background-color: gold;
+  color: blue;
+}
+#feature .fe-box:nth-child(4) b {
+  background-color: rgb(138, 138, 212);
+  color: rgb(99, 5, 5);
+}
+#feature .fe-box:nth-child(5) b {
+  background-color: rgb(23, 90, 6);
+}
+#feature .fe-box:nth-child(6) b {
+  background-color: rgb(44, 155, 103);
+}
+/* ============ FEATURED PRODUCTS ================= */
+/* .section-p1 {
+  padding: 40px 80px;
+} */
+/* we allready have this code in the section above this one */
+
+#product1 {
+  text-align: center;
+  background: linear-gradient(to top, gray, white);
+  border-bottom: 3px solid rgb(4, 95, 155);
+}
+h5 {
+  font-size: 50px;
+  font-family: "BebasNeue-Regular", sans-serif;
+  word-spacing: 15px;
+  letter-spacing: 1px;
+}
+#product1 p {
+  padding-bottom: 10px;
+  font-size: larger;
+  color: rgb(119, 119, 119);
+}
+#product1 .pro-container {
+  width: 100%;
+  height: 1800px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 195px;
+}
+/* == CODE FOR THE CONTAINERS == */
+/* ON THE FEATURED SECTION */
+.pro {
+  width: 450px;
+  height: 500px;
+  border: 1px solid #acbdae;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 2px;
+}
+.pro-text {
+  display: flex;
+  padding-top: 15px;
+}
+#product1 .pro p {
+  font-size: 30px;
+  padding-left: 40px;
+  font-family: "SedgwickAve-Regular", sans-serif;
+  color: rgb(28, 2, 61);
+  padding-right: 50px;
+}
+#product1 .pro span {
+  font-size: 30px;
+  right: 0;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 2px;
+  padding: 7px;
+  color: goldenrod;
+  background-color: black;
+}
+/* IMGS */
+.pro img {
+  width: auto;
+  height: 400px;
+}
+.pro .preworkout-p1 {
+  width: 80%;
+  justify-content: center;
+  padding-left: 40px;
+}
+/* ================= BANNER EXPLORE SECTION ================== */
+#sm-banner {
+  z-index: 1;
+  position: relative; /* Ensures proper positioning */
+  background: linear-gradient(to bottom, aqua, white);
+  height: 1200px;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center; /* Centers the divs horizontally */
+  padding-top: 50px; /* Adds space at the top so divs don't overlap with h5 */
+}
+
+#sm-banner h5 {
+  position: absolute; /* Positions h5 independently */
+  top: 20px; /* Adjusts its position from the top */
+  left: 50%; /* Moves it to the center */
+  transform: translateX(-50%); /* Centers it perfectly */
+  font-size: 24px; /* Adjust the size as needed */
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+#sm-banner .banner-box1 {
+  width: 1200px;
+  height: 600px;
+  border: 3px solid;
+  background-image: url("./assets/imgs/explore-tab/protein-thumbnail.png");
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: flex-start; /* Aligns items to the left */
+  justify-content: flex-end; /* Pushes content to the bottom */
+  padding: 20px; /* Adds spacing from the edges */
+  animation: borderAnimation 2s infinite linear;
+}
+/* ==== ANIMATION ===== */
+@keyframes borderAnimation {
+  0% {
+    border-color: white;
+  }
+  50% {
+    border-color: blue;
+  }
+  100% {
+    border-color: white;
+  }
+}
+#sm-banner b {
+  color: white;
+  font-family: "Kanit-Bold", sans-serif;
+  font-size: larger;
+  margin-bottom: 10px; /* Adds spacing between text and button */
+}
+
+#sm-banner a button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#sm-banner a button:hover {
+  background-color: #e64a19;
+}
+#sm-banner .banner-box2 {
+  width: 400px;
+  height: 600px;
+  border: 3px solid;
+  background-image: url("./assets/imgs/explore-tab/creatine.png");
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: flex-start; /* Aligns items to the left */
+  justify-content: flex-end; /* Pushes content to the bottom */
+  padding: 20px; /* Adds spacing from the edges */
+  animation: borderAnimation 2s infinite linear;
+}
+#sm-banner .banner-box3 {
+  width: 750px;
+  height: 420px;
+  border: 3px solid;
+  background-image: url("./assets/imgs/explore-tab/Jeff-Nippard-6--750x422.jpg");
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: flex-start; /* Aligns items to the left */
+  justify-content: flex-end; /* Pushes content to the bottom */
+  padding: 20px; /* Adds spacing from the edges */
+  animation: borderAnimation 2s infinite linear;
+}
+/* ============= NEWS LETTER SECTION ================== */
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("./assets/imgs/newsLetter-banner/news-letter-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the background covers the entire section */
+  width: 100vw; /* Stretches to the full viewport width */
+  max-width: 100%; /* Prevents restrictions from parent elements */
+  margin: 0;
+  padding: 20px; /* Adjusts padding to keep content inside properly */
+  box-sizing: border-box; /* Ensures padding doesn’t affect width */
+  position: relative; /* Helps prevent unexpected shifts */
+  left: 0;
+  right: 0;
+}
+
+#newsletter .newstext {
+  color: white;
+}
+#newsletter input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#newsletter button {
+  background-color: #088178;
+  color: #fff;
+  white-space: nowrap;
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid transparent;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+/* ================= FOOTER SECTION =============== */
+.col img {
+  width: 200px;
+  height: auto;
+}
+.col h4 {
+  font-family: "Kanit-Regular", sans-serif;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+.col p,
+strong {
+  font-family: "Kanit-Regular", sans-serif;
+  letter-spacing: 1px;
+}
+.col .follow i img {
+  width: 40px;
+  height: auto;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .copyright {
+  color: #9c9c9c;
+}
+footer .col a {
+  text-decoration: none;
+  color: #666666;
+  transition: 0.3s;
+  margin: 0 0 8px 0;
+}
+footer .col a:hover {
+  color: rgb(27, 27, 27);
+}
