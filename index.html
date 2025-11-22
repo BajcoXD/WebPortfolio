@@ -58,7 +58,16 @@
             <a href="#contact">Contact</a>
           </div>
           <button id="theme-switch">
-
+            <img
+              class="dark-icon"
+              src="./Assets/Theme Icon/dark_mode.png"
+              alt="moon icon"
+            />
+            <img
+              class="light-icon"
+              src="./Assets/Theme Icon/light_mode.png"
+              alt="sun icon"
+            />
           </button>
         </div>
         <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
@@ -137,13 +146,13 @@
               ></a>
             </div>
             <div class="btn">
-              <button
+              <a href="#contact"><button
                 data-aos="zoom-out"
                 data-aos-duration="1500"
                 data-aos-delay="1800"
-              >
+               style="transition: 0.2s linear;">
                 Hire me
-              </button>
+              </button></a>
             </div>
           </div>
         </div>
@@ -169,7 +178,10 @@
               data-aos-duration="1200"
               data-aos-delay="100"
             >
-              <img src="./Assets/project imgs/telekom-scr.png" alt="Project 1" />
+              <img
+                src="./Assets/project imgs/telekom-scr.png"
+                alt="Project 1"
+              />
               <div class="project-info">
                 <h3>Project Telekom</h3>
                 <p>
@@ -334,7 +346,6 @@
         </div>
       </div>
     </section>
-
     <!-- SKILLS SECTION -->
     <section id="skills">
       <div class="skills-container" data-aos="fade-up" data-aos-duration="1200">
@@ -378,7 +389,7 @@
             <h3>C#</h3>
           </div>
           <div class="skill-card">
-            <img src="./Skills imgs/ms-sql.png" alt="MS SQL" />
+            <img src="./Assets/Skills imgs/ms-sql.png" alt="MS SQL" />
             <h3>MS SQL</h3>
           </div>
           <div class="skill-card">
@@ -432,20 +443,33 @@
           Have an idea, project, or opportunity you'd like to discuss? I’d love
           to hear from you — send me a message below.
         </p>
-        <form id="contact-form" action="https://formspree.io/f/mgvrvvdd" method="POST">
-  <div class="form-group">
-    <input type="text" name="name" placeholder="Your Name" required />
-  </div>
-  <div class="form-group">
-    <input type="email" name="email" placeholder="Your Email" required />
-  </div>
-  <div class="form-group">
-    <textarea name="message" rows="6" placeholder="Your Message..." required></textarea>
-  </div>
-  <button type="submit">Send Message</button>
-  <div id="form-message" style="margin-top: 10px; color: green;"></div>
-</form>
-
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/mgvrvvdd"
+          method="POST"
+        >
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Your Message..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+          <div id="form-message" style="margin-top: 10px; color: green"></div>
+        </form>
       </div>
     </section>
 
@@ -453,7 +477,8 @@
     <script>
       AOS.init({ offset: 0 });
     </script>
-    <script src="mailSent.js"></script>
-    <script src="script.js"></script>
+    <script src="./Script/mobileTheme.js"></script>
+    <script src="./Script/theme.js"></script>
+    <script src="./Script/script.js"></script>
   </body>
 </html>
