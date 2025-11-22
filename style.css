@@ -894,6 +894,13 @@ section:first-of-type {
 
 /* ===================== TABLET (max-width: 884px) ===================== */
 
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
 @media (max-width: 884px) {
   /* General */
   .project-container {
@@ -940,6 +947,8 @@ section:first-of-type {
   /* Projects */
   #projects {
     padding: 70px 5%;
+    height: auto;
+    width: auto;
   }
 
   .projects-grid {
@@ -951,6 +960,8 @@ section:first-of-type {
     flex-direction: column;
     text-align: center;
     padding: 80px 5%;
+    width: auto;
+    height: auto;
   }
 
   .about-container {
@@ -984,6 +995,19 @@ section:first-of-type {
   /* Skills */
   #skills {
     padding: 40px 5% 60px;
+    width: auto;
+    height: auto;
+  }
+  #skills {
+    padding-bottom: 120px; /* FIXES OVERLAP ON TABLETS */
+  }
+
+  .skills-grid {
+    margin-bottom: 40px; /* gives space below last row */
+  }
+  .skills-grid .skill-card {
+    width: 30%; /* 3 per row on tablets */
+    max-width: none;
   }
 
   #skills h2 {
@@ -997,7 +1021,7 @@ section:first-of-type {
   /* Contact */
   #contact {
     padding-top: 60px;
-    position: relative;
+    position: static !important;
   }
 
   #contact h2 {
@@ -1027,6 +1051,11 @@ section:first-of-type {
   }
 
   /* Projects */
+  #projects {
+    height: auto;
+    width: auto;
+    padding-top: 60%;
+  }
   #projects h2 {
     font-size: 2rem;
   }
@@ -1034,6 +1063,8 @@ section:first-of-type {
   /* About */
   #about {
     padding: 60px 5%;
+    width: auto;
+    height: auto;
   }
 
   .about-img-container .wrapper {
@@ -1064,10 +1095,21 @@ section:first-of-type {
   #skills {
     padding-bottom: 50px;
   }
+  #skills {
+    padding-bottom: 150px; /* EXTRA SPACE FOR SMALL SCREENS */
+  }
+
+  .skills-grid {
+    margin-bottom: 60px;
+  }
+  .skills-grid .skill-card {
+    width: 45%; /* 2 per row on phones */
+  }
 
   /* Contact */
   #contact {
     padding-top: 50px;
+    position: static !important;
   }
 
   .contact-container form {
