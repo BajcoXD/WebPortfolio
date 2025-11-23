@@ -46,6 +46,18 @@
   margin-left: 50px;
   background-color: #787b80;
 }
+#theme-switch-mobile {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  background-color: #787b80;
+}
 
 .light-theme {
   /* ===== WARM MID-TONE LIGHT MODE WITH BETTER SEPARATION ===== */
@@ -956,41 +968,58 @@ section:first-of-type {
   }
 
   /* About */
-  #about {
-    flex-direction: column;
-    text-align: center;
-    padding: 80px 5%;
-    width: auto;
-    height: auto;
-  }
+ #about {
+  flex-direction: column;
+  text-align: center;
+  padding: 80px 5%;
+  width: auto;
+  height: auto;
+}
 
-  .about-container {
-    flex-direction: column;
-    gap: 50px;
-  }
+.about-container {
+  flex-direction: column;
+  gap: 50px;
+}
 
-  .about-image img {
-    width: 250px;
-    height: 250px;
-  }
+.about-image img {
+  width: 250px;
+  height: 250px;
+}
 
-  .about-img-container .wrapper {
-    width: 85%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
+/* FIXED */
+.about-img-container .wrapper {
+  width: 85%;
+  height: 220px; /* ← REAL HEIGHT (change if needed) */
+  overflow: hidden; /* prevent overflow */
+}
 
-  .about-content h2 {
-    font-size: 2rem;
-  }
+/* Makes the sliding images fill the wrapper */
+.about-img-container .wrapper .wrapper-holder {
+  height: 100%;
+}
 
-  .about-content p {
-    font-size: 1rem;
-  }
+/* All slides should fill container */
+#slider-img-1,
+#slider-img-2,
+#slider-img-3,
+#slider-img-4 {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
 
-  .about-btn {
-    padding: 10px 25px;
-  }
+.about-content h2 {
+  font-size: 2rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+}
+
+.about-btn {
+  padding: 10px 25px;
+}
 
   /* Skills */
   #skills {
@@ -1125,4 +1154,47 @@ section:first-of-type {
     font-size: 1rem;
     padding: 12px;
   }
+}
+
+@media (max-width: 1090px) {
+  .about-img-container{
+    height: auto;
+    width: 5%;
+  }
+  
+}
+@media (max-width: 1280px) {
+  .about-img-container{
+    height: auto;
+    width: 5%;
+  }
+  
+}
+@media (max-width: 883px) {
+  .about-img-container {
+  width: 100%;
+  padding: 0;
+}
+  .about-img-container .wrapper {
+    width: 90vw; /* nearly full width of screen */
+    height: auto; /* let height adjust proportionally */
+    max-width: none;
+    max-height: none;
+  }
+
+  .about-img-container .wrapper .wrapper-holder {
+    height: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .about-img-container .wrapper {
+    width: 90vw; /* nearly full width of screen */
+    height: auto; /* let height adjust proportionally */
+    max-width: none;
+    max-height: none;
+  }
+  .about-img-container {
+  width: 100%;
+  padding: 0;
+}
 }
