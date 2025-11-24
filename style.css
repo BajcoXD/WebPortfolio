@@ -1156,36 +1156,17 @@ section:first-of-type {
   }
 }
 
-@media (max-width: 1090px) {
-  .about-img-container{
-    height: auto;
-    width: 5%;
-  }
-  
+.about-img-container .wrapper {
+  width: 90vw; /* nearly full width of screen */
+  height: auto; /* let height adjust proportionally */
+  max-width: none;
+  max-height: none;
 }
-@media (max-width: 1280px) {
-  .about-img-container{
-    height: auto;
-    width: 5%;
-  }
-  
-}
-@media (max-width: 883px) {
-  .about-img-container {
-  width: 100%;
-  padding: 0;
-}
-  .about-img-container .wrapper {
-    width: 90vw; /* nearly full width of screen */
-    height: auto; /* let height adjust proportionally */
-    max-width: none;
-    max-height: none;
-  }
 
-  .about-img-container .wrapper .wrapper-holder {
-    height: 100%;
-  }
+.about-img-container .wrapper .wrapper-holder {
+  height: 100%;
 }
+
 @media (max-width: 375px) {
   .about-img-container .wrapper {
     width: 90vw; /* nearly full width of screen */
@@ -1194,7 +1175,71 @@ section:first-of-type {
     max-height: none;
   }
   .about-img-container {
-  width: 100%;
-  padding: 0;
+    width: 100%;
+    padding: 0;
+  }
 }
+
+@media (max-width: 481px) {
+  #projects {
+    padding-top: 60%;
+  }
+}
+@media (max-width: 524px) {
+  #projects {
+    padding-top: 60%;
+  }
+}
+@media (max-width: 525px) {
+  #projects {
+    padding-top: 60%;
+  }
+}
+@media (max-width: 884px) {
+  #projects {
+    padding-top: 80%;
+  }
+}
+/* -------- FIX SLIDER BETWEEN 481px AND 1325px -------- */
+@media (min-width: 481px) and (max-width: 1325px) {
+  #about {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+    width: auto;
+    height: auto;
+  }
+  #skills {
+     flex-direction: column;
+    text-align: center;
+    padding: 80px 5%;
+    width: auto;
+    height: auto;
+  }
+  .about-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-img-container .wrapper {
+    width: 90vw;
+    height: 350px;       /* FIXED HEIGHT — ADJUST IF NEEDED */
+    max-width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .about-img-container .wrapper-holder {
+    height: 100%;
+  }
+
+  #slider-img-1,
+  #slider-img-2,
+  #slider-img-3,
+  #slider-img-4 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
 }
