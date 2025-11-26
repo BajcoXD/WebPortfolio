@@ -246,6 +246,7 @@ section {
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 50px var(--accent);
+  margin-top: 5%;
 }
 
 .main-container .image img {
@@ -257,6 +258,9 @@ section {
 
 .main-container .image:hover {
   animation: animate 1.5s ease-in-out infinite;
+}
+#hero{
+  margin-bottom: 3%;
 }
 
 @keyframes animate {
