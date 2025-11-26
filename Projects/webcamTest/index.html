@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Camera App</title>
+</head>
+<body>
+
+  <canvas id="starfield"></canvas>
+
+  <div class="wrapper">
+    <h1 class="title">Camera Snapshot</h1>
+
+    <button id="btn-start-camera" class="btn">Start Camera</button>
+    <button id="btn-exit-camera" class="btn" style="display:none;">Exit Camera</button>
+
+
+    <video id="video" width="500" height="400" autoplay playsinline></video>
+
+    <button id="take-snapshot" class="btn">Take Snapshot</button>
+
+    <div id="dataurl-container" class="result-box">
+      <canvas id="canvas" width="500" height="400"></canvas>
+      <div id="dataurl-header">Image Data URL</div>
+      <textarea id="dataurl" readonly></textarea>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
